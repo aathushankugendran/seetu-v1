@@ -46,30 +46,37 @@ The application will be available at `http://localhost:8080`
 ```
 seetu-v1/
 ├── src/
-│   ├── assets/           # Static assets (images, icons, fonts)
 │   ├── components/       # Reusable UI components
-│   │   ├── common/       # Common components
-│   │   ├── features/     # Feature-specific components
 │   │   ├── layout/       # Layout components
 │   │   └── ui/          # shadcn/ui components
-│   ├── constants/        # Application constants
+│   ├── config/          # Application configuration
+│   ├── constants/       # Application constants
+│   ├── handlers/        # Serverless function handlers
 │   ├── hooks/           # Custom React hooks
 │   ├── lib/             # Utility libraries
 │   ├── pages/           # Page components
+│   ├── providers/       # React context providers
+│   ├── router/          # Routing configuration
 │   ├── services/        # API services
-│   ├── store/           # State management
-│   ├── styles/          # Global styles
 │   ├── types/           # TypeScript type definitions
 │   ├── utils/           # Utility functions
 │   ├── App.tsx          # Main App component
-│   └── main.tsx         # Application entry point
+│   ├── main.tsx         # Application entry point
+│   └── index.css        # Global styles
 ├── public/              # Public assets
-
-├── .env.example        # Environment variables template
+│   └── logos/           # Logo files
+├── .env.example         # Environment variables template
+├── .gitignore          # Git ignore rules
+├── .prettierrc         # Prettier configuration
+├── .prettierignore     # Prettier ignore rules
+├── components.json     # shadcn/ui configuration
+├── eslint.config.js    # ESLint configuration
 ├── package.json        # Dependencies and scripts
+├── postcss.config.js   # PostCSS configuration
+├── serverless.yml      # Serverless framework configuration
+├── tailwind.config.ts  # Tailwind CSS configuration
 ├── tsconfig.json       # TypeScript configuration
-├── vite.config.ts      # Vite configuration
-└── tailwind.config.ts  # Tailwind CSS configuration
+└── vite.config.ts      # Vite configuration
 ```
 
 ## 🚀 Available Scripts
