@@ -35,7 +35,7 @@ class WaitlistService {
     this.baseUrl =
       import.meta.env.VITE_WAITLIST_API_URL ||
       'https://hx8vm5y2ab.execute-api.us-east-1.amazonaws.com/dev';
-    this.timeout = parseInt(import.meta.env.VITE_API_TIMEOUT || '10000', 10);
+    this.timeout = parseInt(import.meta.env.VITE_API_TIMEOUT || '15000', 10);
   }
 
   private async makeRequest<T>(
