@@ -1,8 +1,10 @@
-import AWS from 'aws-sdk';
+import { DynamoDBClient } from '@aws-sdk/client-dynamodb';
+import { DynamoDBDocumentClient, PutCommand, QueryCommand } from '@aws-sdk/lib-dynamodb';
 import { v4 as uuidv4 } from 'uuid';
 
 // Initialize DynamoDB
-const dynamodb = new AWS.DynamoDB.DocumentClient();
+const client = new DynamoDBClient({ region: process.env.REGION });
+const dynamodb = DynamoDBDocumentClient.from(client);
 
 // Response helper
 const createResponse = (statusCode, body) => ({
@@ -113,7 +115,7 @@ export const submitWaitlist = async event => {
       },
     };
 
-    const existingResult = await dynamodb.query(existingEmailParams).promise();
+      const existingResult = await dynamodb.send(new QueryCommand(existingEmailParams));
     if (existingResult.Items && existingResult.Items.length > 0) {
       return createResponse(409, {
         success: false,
@@ -127,7 +129,7 @@ export const submitWaitlist = async event => {
       Item: waitlistItem,
     };
 
-    await dynamodb.put(params).promise();
+    await dynamodb.send(new PutCommand(params));
 
     console.log('Successfully stored waitlist entry');
 

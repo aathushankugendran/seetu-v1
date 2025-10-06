@@ -46,7 +46,7 @@ functions:
     package:
       patterns:
         - 'src/handlers/**'
-        - 'node_modules/aws-sdk/**'
+        - 'node_modules/@aws-sdk/**'
         - 'node_modules/uuid/**'
 
   getWaitlistStats:
@@ -70,7 +70,7 @@ functions:
     package:
       patterns:
         - 'src/handlers/**'
-        - 'node_modules/aws-sdk/**'
+        - 'node_modules/@aws-sdk/**'
         - 'node_modules/uuid/**'
 
 resources:
