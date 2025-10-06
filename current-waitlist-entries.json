@@ -1,0 +1,20 @@
+[
+  {
+    "id": "mock-1759777133608",
+    "firstName": "Test",
+    "lastName": "User",
+    "email": "test@example.com",
+    "country": "US",
+    "createdAt": "2025-10-06T18:58:53.608Z",
+    "updatedAt": "2025-10-06T18:58:53.610Z"
+  },
+  {
+    "id": "mock-1759777205092",
+    "firstName": "Aathushan",
+    "lastName": "Kugendran",
+    "email": "aathushankugendran@gmail.com",
+    "country": "CA",
+    "createdAt": "2025-10-06T19:00:05.092Z",
+    "updatedAt": "2025-10-06T19:00:05.092Z"
+  }
+]
