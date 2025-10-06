@@ -18,7 +18,6 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
     alert('Thank you for your message! We\'ll get back to you within 24 hours.');
   };
 
