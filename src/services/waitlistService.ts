@@ -32,7 +32,9 @@ class WaitlistService {
   private timeout: number;
 
   constructor() {
-    this.baseUrl = import.meta.env.VITE_WAITLIST_API_URL || 'http://localhost:3000';
+    this.baseUrl =
+      import.meta.env.VITE_WAITLIST_API_URL ||
+      'https://hx8vm5y2ab.execute-api.us-east-1.amazonaws.com/dev';
     this.timeout = parseInt(import.meta.env.VITE_API_TIMEOUT || '10000', 10);
   }
 
@@ -65,14 +67,14 @@ class WaitlistService {
       return await response.json();
     } catch (error) {
       clearTimeout(timeoutId);
-      
+
       if (error instanceof Error) {
         if (error.name === 'AbortError') {
           throw new Error('Request timeout - please try again');
         }
         throw error;
       }
-      
+
       throw new Error('An unexpected error occurred');
     }
   }
@@ -85,20 +87,24 @@ class WaitlistService {
       });
     } catch (error) {
       console.error('Waitlist submission error:', error);
-      
+
       // Handle specific error cases
       if (error instanceof Error) {
         if (error.message.includes('already registered')) {
           throw new Error('This email is already registered for our waitlist');
         }
         if (error.message.includes('timeout')) {
-          throw new Error('Request timed out. Please check your connection and try again');
+          throw new Error(
+            'Request timed out. Please check your connection and try again'
+          );
         }
         if (error.message.includes('Failed to fetch')) {
-          throw new Error('Unable to connect to our servers. Please try again later');
+          throw new Error(
+            'Unable to connect to our servers. Please try again later'
+          );
         }
       }
-      
+
       throw new Error('Failed to join waitlist. Please try again');
     }
   }
