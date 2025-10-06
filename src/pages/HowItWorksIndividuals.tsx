@@ -1,7 +1,7 @@
 
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { User, Search, DollarSign, Shield, TrendingUp, Users, CheckCircle, ArrowRight } from 'lucide-react';
+import { User, DollarSign, Shield, TrendingUp, Users, CheckCircle, ArrowRight } from 'lucide-react';
 
 const HowItWorksIndividuals = () => {
   return (
