@@ -109,3 +109,14 @@ yarn.lock
 
 # Local development
 .vite/
+
+# Development and testing files
+mock-api.js
+simple-waitlist.js
+current-waitlist-entries.json
+
+# Environment files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
