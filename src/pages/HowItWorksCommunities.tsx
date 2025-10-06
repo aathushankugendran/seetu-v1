@@ -1,8 +1,8 @@
 
-import React from 'react';
+
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Users, Settings, Calendar, Shield, CheckCircle, TrendingUp, ArrowRight } from 'lucide-react';
+import { Users, Settings, Calendar, Shield, CheckCircle, TrendingUp } from 'lucide-react';
 
 const HowItWorksCommunities = () => {
   return (

@@ -1,5 +1,5 @@
 
-import React from 'react';
+
 import { Card, CardContent } from '@/components/ui/card';
 import { Globe, Users, Shield, TrendingUp, Heart, Building, DollarSign } from 'lucide-react';
 

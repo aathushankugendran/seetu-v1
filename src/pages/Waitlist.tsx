@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { CheckCircle, ArrowRight, Users, Clock, Star } from 'lucide-react';
+import { CheckCircle, ArrowRight, Users, Clock, Star, AlertCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { waitlistService, WaitlistSubmission } from '@/services/waitlistService';
 
 // Country data with flags (using country codes for flag emojis)
 const countries = [
@@ -90,6 +91,7 @@ const Waitlist = () => {
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -102,12 +104,29 @@ const Waitlist = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
+    setError(null);
     
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    setIsSubmitted(true);
-    setIsLoading(false);
+    try {
+      const submissionData: WaitlistSubmission = {
+        firstName: formData.firstName.trim(),
+        lastName: formData.lastName.trim(),
+        email: formData.email.trim(),
+        country: formData.country
+      };
+      
+      const response = await waitlistService.submitToWaitlist(submissionData);
+      
+      if (response.success) {
+        setIsSubmitted(true);
+      } else {
+        setError(response.message || 'Failed to join waitlist');
+      }
+    } catch (err) {
+      console.error('Waitlist submission error:', err);
+      setError(err instanceof Error ? err.message : 'Failed to join waitlist. Please try again.');
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   if (isSubmitted) {
@@ -244,6 +263,12 @@ const Waitlist = () => {
 
           {/* Form */}
           <div className="bg-white/95 backdrop-blur-md rounded-3xl shadow-2xl border border-white/20 p-8">
+            {error && (
+              <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-xl flex items-center space-x-3">
+                <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0" />
+                <p className="text-red-700 text-sm">{error}</p>
+              </div>
+            )}
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
@@ -318,8 +343,8 @@ const Waitlist = () => {
               
               <Button
                 type="submit"
-                disabled={isLoading}
-                className="w-full h-12 bg-gradient-to-r from-blue-600 to-teal-500 hover:from-blue-700 hover:to-teal-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:transform-none"
+                disabled={isLoading || !formData.firstName || !formData.lastName || !formData.email || !formData.country}
+                className="w-full h-12 bg-gradient-to-r from-blue-600 to-teal-500 hover:from-blue-700 hover:to-teal-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:transform-none disabled:cursor-not-allowed"
               >
                 {isLoading ? (
                   <div className="flex items-center justify-center">

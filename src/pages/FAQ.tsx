@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { ChevronDown, ChevronUp, MessageCircle } from 'lucide-react';
 
@@ -157,7 +157,7 @@ const FAQ = () => {
               <div className="space-y-4">
                 {faqs
                   .filter(faq => faq.category === category)
-                  .map((faq, index) => {
+                  .map((faq) => {
                     const globalIndex = faqs.indexOf(faq);
                     const isOpen = openItems.includes(globalIndex);
                     
