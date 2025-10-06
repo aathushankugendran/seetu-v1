@@ -7,9 +7,19 @@ provider:
   runtime: nodejs20.x
   stage: ${opt:stage, 'dev'}
   region: ${opt:region, 'us-east-1'}
+  timeout: 30
+  memorySize: 256
   environment:
     WAITLIST_TABLE: ${self:service}-waitlist-signups-${self:provider.stage}
     REGION: ${self:provider.region}
+    NODE_ENV: ${self:provider.stage}
+  deploymentBucket:
+    name: ${self:service}-deployments-${self:provider.region}
+  versionFunctions: false
+  tracing:
+    lambda: true
+  logs:
+    restApi: true
   iamRoleStatements:
     - Effect: Allow
       Action:
