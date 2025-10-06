@@ -13,13 +13,6 @@ provider:
     WAITLIST_TABLE: ${self:service}-waitlist-signups-${self:provider.stage}
     REGION: ${self:provider.region}
     NODE_ENV: ${self:provider.stage}
-  deploymentBucket:
-    name: ${self:service}-deployments-${self:provider.region}
-  versionFunctions: false
-  tracing:
-    lambda: true
-  logs:
-    restApi: true
   iamRoleStatements:
     - Effect: Allow
       Action:
@@ -28,8 +21,8 @@ provider:
         - dynamodb:Query
         - dynamodb:Scan
       Resource:
-        - "arn:aws:dynamodb:${self:provider.region}:*:table/${self:provider.environment.WAITLIST_TABLE}"
-        - "arn:aws:dynamodb:${self:provider.region}:*:table/${self:provider.environment.WAITLIST_TABLE}/index/*"
+        - 'arn:aws:dynamodb:${self:provider.region}:*:table/${self:provider.environment.WAITLIST_TABLE}'
+        - 'arn:aws:dynamodb:${self:provider.region}:*:table/${self:provider.environment.WAITLIST_TABLE}/index/*'
 
 functions:
   submitWaitlist:
@@ -91,6 +84,8 @@ resources:
             AttributeType: S
           - AttributeName: createdAt
             AttributeType: S
+          - AttributeName: email
+            AttributeType: S
         KeySchema:
           - AttributeName: id
             KeyType: HASH
@@ -103,6 +98,12 @@ resources:
           - IndexName: createdAt-index
             KeySchema:
               - AttributeName: createdAt
+                KeyType: HASH
+            Projection:
+              ProjectionType: ALL
+          - IndexName: email-index
+            KeySchema:
+              - AttributeName: email
                 KeyType: HASH
             Projection:
               ProjectionType: ALL
