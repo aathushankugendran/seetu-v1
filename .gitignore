@@ -41,7 +41,6 @@ build/
 out/
 
 # Dependencies
-node_modules/
 .pnp
 .pnp.js
 
@@ -85,7 +84,6 @@ pids
 
 # Nuxt.js build / generate output
 .nuxt
-dist
 
 # Gatsby files
 .cache/
