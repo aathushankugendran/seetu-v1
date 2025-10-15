@@ -3,7 +3,6 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Shield, Users, DollarSign, Clock, CheckCircle, TrendingUp } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { CTAButton } from '@/components/ui/buttons';
 
 const Home = () => {
   return (
@@ -44,7 +43,7 @@ const Home = () => {
                     Learn More ↓
                   </span>
                 </button>
-              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -163,10 +162,16 @@ const Home = () => {
             Ready to Transform Your Savings?
           </h2>
           <p className="text-xl text-white/90 mb-12 leading-relaxed max-w-3xl mx-auto">
-            Join thousands of community members who trust Seetu for their rotating savings groups
+            Join thousands of community members who trust Seetu for their rotating savings groups today!
           </p>
           <div className="flex justify-center items-center">
-            <CTAButton />
+            <button 
+              className="bg-white text-[#1851fc] hover:bg-gray-50 font-medium rounded-full px-8 py-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 min-w-[180px] text-center"
+            >
+              <Link to="/waitlist" className="flex items-center justify-center gap-2">
+                Early Access? →
+              </Link>
+            </button>
           </div>
         </div>
       </section>
