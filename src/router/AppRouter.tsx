@@ -25,13 +25,13 @@ export const AppRouter = () => {
         <Layout>
           <Routes>
             <Route path={ROUTES.HOME} element={<Home />} />
-            <Route path={ROUTES.HOW_IT_WORKS.INDIVIDUALS} element={<HowItWorksIndividuals />} />
+            {/* <Route path={ROUTES.HOW_IT_WORKS.INDIVIDUALS} element={<HowItWorksIndividuals />} /> */}
             <Route path={ROUTES.HOW_IT_WORKS.COMMUNITIES} element={<HowItWorksCommunities />} />
-            <Route path={ROUTES.HOW_IT_WORKS.BUSINESSES} element={<HowItWorksBusinesses />} />
+            {/* <Route path={ROUTES.HOW_IT_WORKS.BUSINESSES} element={<HowItWorksBusinesses />} /> */}
             <Route path={ROUTES.ABOUT} element={<About />} />
-            <Route path={ROUTES.FAQ} element={<FAQ />} />
+            {/* <Route path={ROUTES.FAQ} element={<FAQ />} /> */}
             <Route path={ROUTES.CONTACT} element={<Contact />} />
-            <Route path={ROUTES.PRICING} element={<Pricing />} />
+            {/* <Route path={ROUTES.PRICING} element={<Pricing />} /> */}
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>

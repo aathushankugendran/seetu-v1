@@ -39,24 +39,10 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       icon: Heart,
       path: '/how-it-works/communities',
     },
-    {
-      key: 'individuals',
-      title: 'For Individuals',
-      description: 'Personal savings and wealth building',
-      icon: Users,
-      path: '/how-it-works/individuals',
-    },
-    {
-      key: 'businesses',
-      title: 'For Businesses',
-      description: 'Employee savings programs',
-      icon: Building,
-      path: '/how-it-works/businesses',
-    },
   ];
 
   return (
-    <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-blue-600 via-teal-500 to-cyan-400" style={{ margin: 0, padding: 0, marginTop: '-8rem' }}>
+    <div className="min-h-screen relative overflow-hidden bg-white" style={{ margin: 0, padding: 0, marginTop: '-8rem' }}>
       {/* Navigation */}
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 transform ${
         isVisible ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'
@@ -78,7 +64,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 <Link
                   to="/"
                   className={`text-sm font-medium transition-colors ${
-                    isActive('/') ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'
+                    isActive('/') ? 'text-[#1851fc]' : 'text-gray-700 hover:text-[#1851fc]'
                   }`}
                 >
                   Home
@@ -90,7 +76,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                   onMouseEnter={() => setIsHowItWorksOpen(true)}
                   onMouseLeave={() => setIsHowItWorksOpen(false)}
                 >
-                  <button className="flex items-center space-x-1 text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors py-2">
+                  <button className="flex items-center space-x-1 text-sm font-medium text-gray-700 hover:text-[#1851fc] transition-colors py-2">
                     <span>How It Works</span>
                     <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isHowItWorksOpen ? 'rotate-180' : ''}`} />
                   </button>
@@ -106,14 +92,14 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                             <Link
                               key={item.key}
                               to={item.path}
-                              className="flex items-start space-x-4 p-3 rounded-xl hover:bg-blue-50 transition-colors group"
+                              className="flex items-start space-x-4 p-3 rounded-xl hover:bg-blue-50/50 transition-colors group"
                               onClick={() => setIsHowItWorksOpen(false)}
                             >
-                              <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-teal-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                              <div className="w-10 h-10 bg-[#1851fc] rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
                                 <item.icon className="w-5 h-5 text-white" />
                               </div>
                               <div className="flex-1">
-                                <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
+                                <h3 className="font-semibold text-gray-900 group-hover:text-[#1851fc] transition-colors">
                                   {item.title}
                                 </h3>
                                 <p className="text-sm text-gray-600">{item.description}</p>
@@ -129,34 +115,18 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 <Link
                   to="/about"
                   className={`text-sm font-medium transition-colors ${
-                    isActive('/about') ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'
+                    isActive('/about') ? 'text-[#1851fc]' : 'text-gray-700 hover:text-[#1851fc]'
                   }`}
                 >
                   About Seetu
                 </Link>
                 <Link
-                  to="/faq"
-                  className={`text-sm font-medium transition-colors ${
-                    isActive('/faq') ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'
-                  }`}
-                >
-                  FAQ
-                </Link>
-                <Link
                   to="/contact"
                   className={`text-sm font-medium transition-colors ${
-                    isActive('/contact') ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'
+                    isActive('/contact') ? 'text-[#1851fc]' : 'text-gray-700 hover:text-[#1851fc]'
                   }`}
                 >
                   Contact
-                </Link>
-                <Link
-                  to="/pricing"
-                  className={`text-sm font-medium transition-colors ${
-                    isActive('/pricing') ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'
-                  }`}
-                >
-                  Pricing
                 </Link>
               </div>
 
@@ -165,7 +135,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 <Button 
                   size="sm" 
                   asChild
-                  className="bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 text-white font-medium rounded-full px-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+                  className="bg-[#1851fc] hover:bg-[#1444d9] text-white font-medium rounded-full px-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
                 >
                   <Link to="/waitlist" className="flex items-center gap-2">
                     Join The Waitlist →
@@ -175,7 +145,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 
               {/* Mobile menu button */}
               <button
-                className="lg:hidden text-gray-700 hover:text-blue-600 transition-colors"
+                className="lg:hidden text-gray-700 hover:text-[#1851fc] transition-colors"
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
               >
                 {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -186,35 +156,23 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             {isMenuOpen && (
               <div className="lg:hidden mt-4 pt-4 border-t border-gray-200">
                 <div className="flex flex-col space-y-4">
-                  <Link to="/" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+                  <Link to="/" className="text-gray-700 hover:text-[#1851fc] font-medium transition-colors">
                     Home
                   </Link>
-                  <Link to="/how-it-works/individuals" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
-                    For Individuals
+                  <Link to="/how-it-works/communities" className="text-gray-700 hover:text-[#1851fc] font-medium transition-colors">
+                    How It Works
                   </Link>
-                  <Link to="/how-it-works/businesses" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
-                    For Businesses
-                  </Link>
-                  <Link to="/how-it-works/communities" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
-                    For Communities
-                  </Link>
-                  <Link to="/about" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+                  <Link to="/about" className="text-gray-700 hover:text-[#1851fc] font-medium transition-colors">
                     About Seetu
                   </Link>
-                  <Link to="/faq" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
-                    FAQ
-                  </Link>
-                  <Link to="/contact" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+                  <Link to="/contact" className="text-gray-700 hover:text-[#1851fc] font-medium transition-colors">
                     Contact
-                  </Link>
-                  <Link to="/pricing" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
-                    Pricing
                   </Link>
                   <div className="flex flex-col space-y-3 pt-4">
                     <Button 
                       size="sm" 
                       asChild
-                      className="bg-gradient-to-r from-blue-600 to-teal-600 text-white font-medium rounded-full shadow-lg"
+                      className="bg-[#1851fc] hover:bg-[#1444d9] text-white font-medium rounded-full shadow-lg"
                     >
                       <Link to="/waitlist" className="flex items-center gap-2 justify-center">
                         Join The Waitlist →
@@ -254,14 +212,8 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             <div>
               <h3 className="font-semibold mb-6 text-white">Platform</h3>
               <div className="space-y-3 text-sm">
-                <Link to="/how-it-works/individuals" className="block text-gray-400 hover:text-white transition-colors">
-                  For Individuals
-                </Link>
-                <Link to="/how-it-works/businesses" className="block text-gray-400 hover:text-white transition-colors">
-                  For Businesses
-                </Link>
                 <Link to="/how-it-works/communities" className="block text-gray-400 hover:text-white transition-colors">
-                  For Communities
+                  How It Works
                 </Link>
                 <Link to="/about" className="block text-gray-400 hover:text-white transition-colors">
                   About Us
@@ -272,9 +224,6 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             <div>
               <h3 className="font-semibold mb-6 text-white">Support</h3>
               <div className="space-y-3 text-sm">
-                <Link to="/faq" className="block text-gray-400 hover:text-white transition-colors">
-                  FAQ
-                </Link>
                 <Link to="/contact" className="block text-gray-400 hover:text-white transition-colors">
                   Contact
                 </Link>

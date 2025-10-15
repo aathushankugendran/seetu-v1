@@ -9,26 +9,26 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        // Primary gradient button (your current style)
-        primary: "bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 text-white shadow-lg hover:shadow-xl hover:scale-105",
+        // Primary button with new blue color
+        primary: "bg-[#1851fc] hover:bg-[#1444d9] text-white shadow-lg hover:shadow-xl hover:scale-105",
         
         // Modern glassmorphism button
         glass: "bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white/20 hover:border-white/30 shadow-lg hover:shadow-xl",
         
-        // Neon glow button
-        neon: "bg-transparent border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white shadow-[0_0_20px_rgba(34,211,238,0.3)] hover:shadow-[0_0_30px_rgba(34,211,238,0.6)]",
+        // Neon glow button with new blue
+        neon: "bg-transparent border-2 border-[#1851fc] text-[#1851fc] hover:bg-[#1851fc] hover:text-white shadow-[0_0_20px_rgba(24,81,252,0.3)] hover:shadow-[0_0_30px_rgba(24,81,252,0.6)]",
         
         // Gradient border button
-        gradientBorder: "bg-white text-blue-700 border-2 border-transparent bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-padding hover:from-blue-700 hover:to-teal-700 hover:text-white",
+        gradientBorder: "bg-white text-[#1851fc] border-2 border-[#1851fc] hover:bg-[#1851fc] hover:text-white",
         
         // Floating button
-        floating: "bg-white text-blue-700 shadow-[0_8px_30px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.2)] hover:-translate-y-1",
+        floating: "bg-white text-[#1851fc] shadow-[0_8px_30px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.2)] hover:-translate-y-1",
         
         // Outline button
-        outline: "border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white",
+        outline: "border-2 border-[#1851fc] text-[#1851fc] hover:bg-[#1851fc] hover:text-white",
         
         // Ghost button
-        ghost: "text-blue-600 hover:bg-blue-50 hover:text-blue-700",
+        ghost: "text-[#1851fc] hover:bg-blue-50 hover:text-[#1444d9]",
         
         // Destructive button
         destructive: "bg-red-600 text-white hover:bg-red-700",

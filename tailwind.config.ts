@@ -71,8 +71,10 @@ export default {
 				},
 				// Updated Seetu brand colors with your specified palette
 				seetu: {
-					primary: '#1950FB',
-					'primary-hover': '#4a77fd',
+					primary: '#1851fc',
+					'primary-hover': '#1444d9',
+					'primary-light': 'rgba(24, 81, 252, 0.1)',
+					'primary-rgb': '24, 81, 252',
 					success: '#12e367',
 					'success-light': '#69f3a1',
 					background: '#f2fcfc',
