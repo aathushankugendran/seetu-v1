@@ -1,16 +1,15 @@
 
 
-import { Card, CardContent } from '@/components/ui/card';
 import { Globe, Users, Shield, TrendingUp, Heart, Building, DollarSign } from 'lucide-react';
 
 const About = () => {
   return (
     <div className="min-h-screen bg-white relative overflow-hidden scroll-smooth">
       {/* Hero Section */}
-      <section className="relative py-12 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center space-y-6">
-            <h1 className="text-3xl lg:text-5xl text-gray-900 leading-tight font-nunito">
+      <section className="relative py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center space-y-4">
+            <h1 className="text-4xl lg:text-6xl text-gray-900 leading-tight font-nunito">
               About 
               <span className="text-[#1851fc]">
                 Seetu
@@ -19,200 +18,140 @@ const About = () => {
             <p className="text-lg text-gray-600 leading-relaxed">
               We're modernizing traditional community finance to make it secure, scalable, and accessible for diaspora communities across Canada.
             </p>
-            <p className="text-base text-gray-500 leading-relaxed">
-              Building a financial system rooted in community trust, not institutional extraction.
-            </p>
           </div>
         </div>
       </section>
 
-      {/* Mission Section */}
-      <section className="py-8 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
-            <h2 className="text-2xl lg:text-3xl text-gray-900 mb-4">
-              Our <span className="text-[#1851fc]">Mission</span>
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
-            <div>
-              <p className="text-base text-gray-600 mb-4 leading-relaxed">
-                Seetu digitizes ROSCAs (Rotating Savings and Credit Associations) — known by different names globally: 
-                susu, kootu, pardner, chit funds, and more. These trust-based community lending groups have existed for centuries 
-                across South Asian, African, Caribbean, and other diaspora communities.
-              </p>
-              <p className="text-base text-gray-600 leading-relaxed">
-                We're building a financial system rooted in community trust, not institutional extraction, 
-                offering an accessible alternative to predatory credit while preserving the cultural importance of collective savings.
+      {/* Story Section - Progressive Reveal */}
+      <section className="py-12 bg-gray-50">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="space-y-8">
+            {/* Story Step 1 */}
+            <div className="text-center">
+              <div className="w-16 h-16 bg-[#1851fc] rounded-full flex items-center justify-center mx-auto mb-4">
+                <Globe className="w-8 h-8 text-white" />
+              </div>
+              <h2 className="text-2xl text-gray-900 mb-3">Traditional Wisdom</h2>
+              <p className="text-gray-600 leading-relaxed">
+                For centuries, communities worldwide have used rotating savings groups — susu, kootu, pardner, chit funds — 
+                to build wealth through collective trust and mutual support.
               </p>
             </div>
-            
-            <div className="grid grid-cols-2 gap-3">
-              {[
-                { icon: Globe, title: "Global", subtitle: "Tradition" },
-                { icon: Shield, title: "Modern", subtitle: "Security" },
-                { icon: Users, title: "Community", subtitle: "Powered" },
-                { icon: TrendingUp, title: "Accessible", subtitle: "Finance" }
-              ].map((item, index) => (
-                <Card key={index} className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-0 shadow-md">
-                  <CardContent className="p-4 text-center">
-                    <div className="w-10 h-10 bg-[#1851fc] rounded-xl flex items-center justify-center mx-auto mb-2 group-hover:scale-105 transition-transform duration-300">
-                      <item.icon className="w-5 h-5 text-white" />
-                    </div>
-                    <div className="text-sm text-gray-900 font-nunito">{item.title}</div>
-                    <div className="text-xs text-gray-600">{item.subtitle}</div>
-                  </CardContent>
-                </Card>
-              ))}
+
+            {/* Story Step 2 */}
+            <div className="text-center">
+              <div className="w-16 h-16 bg-[#1851fc] rounded-full flex items-center justify-center mx-auto mb-4">
+                <Shield className="w-8 h-8 text-white" />
+              </div>
+              <h2 className="text-2xl text-gray-900 mb-3">Modern Security</h2>
+              <p className="text-gray-600 leading-relaxed">
+                We're digitizing these time-tested practices with built-in fraud protection, verified members, 
+                and guaranteed payouts — preserving cultural traditions while adding modern safeguards.
+              </p>
+            </div>
+
+            {/* Story Step 3 */}
+            <div className="text-center">
+              <div className="w-16 h-16 bg-[#1851fc] rounded-full flex items-center justify-center mx-auto mb-4">
+                <Users className="w-8 h-8 text-white" />
+              </div>
+              <h2 className="text-2xl text-gray-900 mb-3">Community First</h2>
+              <p className="text-gray-600 leading-relaxed">
+                Building a financial system rooted in community trust, not institutional extraction. 
+                An accessible alternative to predatory credit that honors collective savings.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Values Section */}
-      <section className="py-8 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Values Section - Simplified */}
+      <section className="py-12 bg-white">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
-            <h2 className="text-2xl lg:text-3xl text-gray-900 mb-4">
+            <h2 className="text-2xl text-gray-900 mb-4">
               Our <span className="text-[#1851fc]">Values</span>
             </h2>
-            <p className="text-base text-gray-600 max-w-2xl mx-auto">The principles that guide everything we do</p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {[
-              {
-                title: "Community First",
-                description: "We believe in the power of collective action and mutual support",
-                icon: Heart
-              },
-              {
-                title: "Cultural Respect",
-                description: "Honoring traditional practices while adding modern security",
-                icon: Globe
-              },
-              {
-                title: "Transparency",
-                description: "Open, honest operations with no hidden fees or surprises",
-                icon: Shield
-              },
-              {
-                title: "Accessibility",
-                description: "Financial tools that work for everyone, regardless of credit history",
-                icon: Users
-              }
-            ].map((value, index) => (
-              <Card key={index} className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 bg-white border-0 shadow-md">
-                <CardContent className="p-4 text-center">
-                  <div className="w-10 h-10 bg-[#1851fc] rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-105 transition-transform duration-300">
-                    <value.icon className="w-5 h-5 text-white" />
-                  </div>
-                  <h3 className="text-sm mb-2 text-gray-900">{value.title}</h3>
-                  <p className="text-gray-600 text-xs leading-relaxed">{value.description}</p>
-                </CardContent>
-              </Card>
-            ))}
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="text-center">
+              <div className="w-12 h-12 bg-[#1851fc] rounded-full flex items-center justify-center mx-auto mb-3">
+                <Heart className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-lg text-gray-900 mb-2">Community First</h3>
+              <p className="text-gray-600 text-sm">Collective action and mutual support</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-12 h-12 bg-[#1851fc] rounded-full flex items-center justify-center mx-auto mb-3">
+                <Shield className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-lg text-gray-900 mb-2">Transparency</h3>
+              <p className="text-gray-600 text-sm">Open, honest operations with no hidden fees</p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Approach Section */}
-      <section className="py-8 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Approach Section - Simplified */}
+      <section className="py-12 bg-gray-50">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
-            <h2 className="text-2xl lg:text-3xl text-gray-900 mb-4">
+            <h2 className="text-2xl text-gray-900 mb-4">
               Our <span className="text-[#1851fc]">Approach</span>
             </h2>
-            <p className="text-base text-gray-600 max-w-2xl mx-auto">
-              Two complementary platforms serving different community needs
-            </p>
+            <p className="text-gray-600">Two platforms for different community needs</p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-            <Card className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 bg-white border-0 shadow-md">
-              <CardContent className="p-4">
-                <div className="w-10 h-10 bg-[#1851fc] rounded-xl flex items-center justify-center mb-3 group-hover:scale-105 transition-transform duration-300">
-                  <Building className="w-5 h-5 text-white" />
-                </div>
-                <h3 className="text-base text-gray-900 mb-2">Organization Seetu</h3>
-                <p className="text-gray-600 mb-3 text-sm">
-                  For existing communities who already run informal rotating savings and want to manage them digitally.
-                </p>
-                
-                <div className="space-y-1">
-                  {[
-                    "Families, temples, cultural organizations",
-                    "Organizer controls all settings and members",
-                    "Flexible rules and payout systems",
-                    "Basic verification, community trust"
-                  ].map((feature, index) => (
-                    <div key={index} className="flex items-center space-x-2">
-                      <div className="w-1.5 h-1.5 bg-[#1851fc] rounded-full"></div>
-                      <span className="text-xs text-gray-600">{feature}</span>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
+          <div className="space-y-6">
+            <div className="text-center">
+              <div className="w-12 h-12 bg-[#1851fc] rounded-full flex items-center justify-center mx-auto mb-3">
+                <Building className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-lg text-gray-900 mb-2">Organization Seetu</h3>
+              <p className="text-gray-600 text-sm">
+                For existing communities who want to manage their rotating savings digitally
+              </p>
+            </div>
 
-            <Card className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 bg-white border-0 shadow-md">
-              <CardContent className="p-4">
-                <div className="w-10 h-10 bg-[#1851fc] rounded-xl flex items-center justify-center mb-3 group-hover:scale-105 transition-transform duration-300">
-                  <DollarSign className="w-5 h-5 text-white" />
-                </div>
-                <h3 className="text-base text-gray-900 mb-2">Marketplace Seetu</h3>
-                <p className="text-gray-600 mb-3 text-sm">
-                  For individuals who want to join rotating savings groups with strangers, matched by our AI system.
-                </p>
-                
-                <div className="space-y-1">
-                  {[
-                    "Individual users seeking saving groups",
-                    "AI-powered matching based on goals and capacity",
-                    "Standardized bidding system and rules",
-                    "Enhanced verification and credit checks"
-                  ].map((feature, index) => (
-                    <div key={index} className="flex items-center space-x-2">
-                      <div className="w-1.5 h-1.5 bg-[#1851fc] rounded-full"></div>
-                      <span className="text-xs text-gray-600">{feature}</span>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
+            <div className="text-center">
+              <div className="w-12 h-12 bg-[#1851fc] rounded-full flex items-center justify-center mx-auto mb-3">
+                <DollarSign className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-lg text-gray-900 mb-2">Marketplace Seetu</h3>
+              <p className="text-gray-600 text-sm">
+                For individuals seeking savings groups, matched by our AI system
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Team Section */}
-      <section className="relative py-8 bg-[#1851fc] overflow-hidden">
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl lg:text-3xl text-white mb-4">
-            Backed by 
-            <span className="block text-white">
-              Experts
-            </span>
+      {/* Team Section - Simplified */}
+      <section className="relative py-12 bg-[#1851fc] overflow-hidden">
+        <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-2xl text-white mb-4">
+            Backed by <span className="text-white">Experts</span>
           </h2>
-          <p className="text-base text-white/90 mb-6">
-            Seetu.ca is incorporated in Canada and mentored by industry leaders who understand both traditional finance and emerging fintech.
+          <p className="text-white/90 mb-6">
+            Mentored by industry leaders who understand both traditional finance and emerging fintech.
           </p>
           
-          <Card className="bg-white/10 backdrop-blur-sm border border-white/20">
-            <CardContent className="p-4">
-              <div className="flex items-center justify-center space-x-3 mb-3">
-                <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
-                  <TrendingUp className="w-5 h-5 text-[#1851fc]" />
-                </div>
-                <div className="text-left">
-                  <div className="text-white">Sarah Chen</div>
-                  <div className="text-xs text-white/80">Chief Investment Officer, Maple Capital</div>
-                </div>
+          <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6">
+            <div className="flex items-center justify-center space-x-3 mb-3">
+              <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+                <TrendingUp className="w-5 h-5 text-[#1851fc]" />
               </div>
-              <p className="text-white/90 italic text-sm">
-                "Seetu represents the future of community finance — where traditional wisdom meets modern security."
-              </p>
-            </CardContent>
-          </Card>
+              <div className="text-left">
+                <div className="text-white">Sarah Chen</div>
+                <div className="text-xs text-white/80">Chief Investment Officer, Maple Capital</div>
+              </div>
+            </div>
+            <p className="text-white/90 italic text-sm">
+              "Seetu represents the future of community finance — where traditional wisdom meets modern security."
+            </p>
+          </div>
         </div>
       </section>
     </div>
