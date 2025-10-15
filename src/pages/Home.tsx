@@ -3,7 +3,7 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Shield, Users, DollarSign, Clock, CheckCircle, TrendingUp } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { WaitlistButton, CTAButton, ContactButton } from '@/components/ui/buttons';
+import { CTAButton } from '@/components/ui/buttons';
 
 const Home = () => {
   return (

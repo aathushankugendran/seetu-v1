@@ -1,15 +1,11 @@
 import { Routes, Route } from 'react-router-dom';
 import Layout from '@/components/layout/Layout';
 import Home from '@/pages/Home';
-import HowItWorksIndividuals from '@/pages/HowItWorksIndividuals';
 import HowItWorksCommunities from '@/pages/HowItWorksCommunities';
-import HowItWorksBusinesses from '@/pages/HowItWorksBusinesses';
 import About from '@/pages/About';
-import FAQ from '@/pages/FAQ';
 import Contact from '@/pages/Contact';
 import Login from '@/pages/Login';
 import Waitlist from '@/pages/Waitlist';
-import Pricing from '@/pages/Pricing';
 import NotFound from '@/pages/NotFound';
 import { ROUTES } from '@/constants';
 
