@@ -38,6 +38,11 @@ const Home = () => {
                 </button>
                 <button 
                   className="bg-[#1851fc] hover:bg-[#1444d9] text-white font-medium rounded-full px-8 py-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 min-w-[160px] text-center"
+                  onClick={() => {
+                    document.getElementById('how-it-works')?.scrollIntoView({ 
+                      behavior: 'smooth' 
+                    });
+                  }}
                 >
                   <span className="flex items-center justify-center gap-2">
                     Learn More ↓
@@ -50,7 +55,7 @@ const Home = () => {
 
 
       {/* How It Works Section */}
-      <section className="relative py-32 bg-white">
+      <section id="how-it-works" className="relative py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <p className="text-[#1851fc] text-sm font-medium mb-4 tracking-wide uppercase">
