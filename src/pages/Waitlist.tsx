@@ -156,7 +156,7 @@ const Waitlist = () => {
               <CheckCircle className="w-8 h-8 text-green-600" />
             </div>
             
-            <h1 className="text-3xl font-bold text-gray-900 mb-4 font-nunito">
+            <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-4 font-nunito">
               You're on the list! 🎉
             </h1>
             
