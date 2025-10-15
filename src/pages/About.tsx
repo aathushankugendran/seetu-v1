@@ -1,6 +1,6 @@
 
 
-import { Globe, Users, Shield, TrendingUp, Heart, Building, DollarSign } from 'lucide-react';
+import { Globe, Users, Shield, Heart, Building, DollarSign } from 'lucide-react';
 
 const About = () => {
   return (
@@ -147,32 +147,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Team Section - Simplified */}
-      <section className="relative py-12 bg-[#1851fc] overflow-hidden">
-        <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl text-white mb-4">
-            Backed by <span className="text-white">Experts</span>
-          </h2>
-          <p className="text-white/90 mb-6">
-            Mentored by industry leaders who understand both traditional finance and emerging fintech.
-          </p>
-          
-          <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6">
-            <div className="flex items-center justify-center space-x-3 mb-3">
-              <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
-                <TrendingUp className="w-5 h-5 text-[#1851fc]" />
-              </div>
-              <div className="text-left">
-                <div className="text-white">Sarah Chen</div>
-                <div className="text-xs text-white/80">Chief Investment Officer, Maple Capital</div>
-              </div>
-            </div>
-            <p className="text-white/90 italic text-sm">
-              "Seetu represents the future of community finance — where traditional wisdom meets modern security."
-            </p>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };
