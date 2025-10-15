@@ -174,7 +174,7 @@ const Home = () => {
               className="bg-white text-[#1851fc] hover:bg-gray-50 font-medium rounded-full px-8 py-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 min-w-[180px] text-center"
             >
               <Link to="/waitlist" className="flex items-center justify-center gap-2">
-                Early Access? →
+                Early Access →
               </Link>
             </button>
           </div>
