@@ -131,16 +131,16 @@ const Waitlist = () => {
 
   if (isSubmitted) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-600 via-teal-500 to-cyan-400 relative overflow-hidden">
+      <div className="min-h-screen bg-white relative overflow-hidden">
         {/* Logo - positioned exactly like in Layout component */}
         <nav className="fixed top-0 left-0 right-0 z-50">
           <div className="max-w-7xl mx-auto px-4 pb-4 pt-4">
-            <div className="bg-white/95 backdrop-blur-md rounded-2xl shadow-xl border border-white/20 px-6 py-3" style={{ width: '85%' }}>
+            <div className="bg-[#1851fc] backdrop-blur-md rounded-2xl shadow-xl border border-white/20 px-6 py-3" style={{ width: '85%' }}>
               <div className="flex justify-between items-center">
                 {/* Logo */}
                 <Link to="/" className="flex items-center">
                   <img 
-                    src="/logos/black-logo.svg" 
+                    src="/logos/white-logo.svg" 
                     alt="Seetu Logo"
                     className="h-10 w-auto"
                   />
@@ -150,40 +150,33 @@ const Waitlist = () => {
           </div>
         </nav>
 
-        {/* Animated background patterns */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-20 left-20 w-72 h-72 bg-white/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-20 right-20 w-96 h-96 bg-white/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-white/10 rounded-full blur-3xl animate-pulse delay-500"></div>
-        </div>
-
         <div className="relative z-10 min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
-          <div className="max-w-md w-full bg-white/95 backdrop-blur-md rounded-3xl shadow-2xl border border-white/20 p-8 text-center">
+          <div className="max-w-md w-full bg-white rounded-3xl shadow-lg border border-gray-200 p-8 text-center">
             <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
               <CheckCircle className="w-8 h-8 text-green-600" />
             </div>
             
-            <h1 className="text-3xl font-bold text-gray-900 mb-4">
+            <h1 className="text-3xl font-bold text-gray-900 mb-4 font-nunito">
               You're on the list! 🎉
             </h1>
             
-            <p className="text-lg text-gray-600 mb-6">
+            <p className="text-base text-gray-600 mb-6">
               Thank you for joining our waitlist. We'll notify you as soon as Seetu launches!
             </p>
             
-            <div className="bg-blue-50 rounded-2xl p-6 mb-6">
-              <div className="flex items-center justify-center space-x-2 text-blue-600 mb-2">
+            <div className="bg-gray-50 rounded-2xl p-6 mb-6">
+              <div className="flex items-center justify-center space-x-2 text-[#1851fc] mb-2">
                 <Clock className="w-5 h-5" />
                 <span className="font-semibold">What's next?</span>
               </div>
-              <p className="text-sm text-blue-700">
+              <p className="text-sm text-gray-600">
                 We'll send you early access, exclusive updates, and special launch offers.
               </p>
             </div>
             
             <Button 
               onClick={() => window.location.href = '/'}
-              className="w-full bg-gradient-to-r from-blue-600 to-teal-500 hover:from-blue-700 hover:to-teal-600 text-white font-semibold py-3 rounded-xl transition-all duration-300 transform hover:scale-105"
+              className="w-full bg-[#1851fc] hover:bg-[#1444d9] text-white font-semibold py-3 rounded-xl transition-all duration-300 transform hover:scale-105"
             >
               Back to Home
             </Button>
@@ -194,16 +187,16 @@ const Waitlist = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-600 via-teal-500 to-cyan-400 relative overflow-hidden">
+    <div className="min-h-screen bg-white relative overflow-hidden">
               {/* Logo - positioned exactly like in Layout component */}
         <nav className="fixed top-0 left-0 right-0 z-50">
           <div className="max-w-7xl mx-auto px-4 pb-4 pt-4">
-            <div className="bg-white/95 backdrop-blur-md rounded-2xl shadow-xl border border-white/20 px-6 py-3" style={{ width: '12%' }}>
+            <div className="bg-[#1851fc] backdrop-blur-md rounded-2xl shadow-xl border border-white/20 px-6 py-3" style={{ width: '12%' }}>
               <div className="flex justify-between items-center">
                 {/* Logo */}
                 <Link to="/" className="flex items-center">
                   <img 
-                    src="/logos/black-logo.svg" 
+                    src="/logos/white-logo.svg" 
                     alt="Seetu Logo"
                     className="h-10 w-auto"
                   />
@@ -213,22 +206,15 @@ const Waitlist = () => {
           </div>
         </nav>
 
-      {/* Animated background patterns */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-20 left-20 w-72 h-72 bg-white/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-white/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-white/10 rounded-full blur-3xl animate-pulse delay-500"></div>
-      </div>
-
       <div className="relative z-10 min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 py-12">
         <div className="max-w-2xl w-full">
           {/* Header */}
           <div className="text-center mb-12">
-            <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight font-nunito">
               Join the
-              <span className="bg-gradient-to-r from-green-300 to-cyan-300 bg-clip-text text-transparent"> Waitlist</span>
+              <span className="text-[#1851fc]"> Waitlist</span>
             </h1>
-            <p className="text-xl lg:text-2xl text-white/90 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
               Be among the first to experience the future of group savings. 
               Get early access and exclusive launch benefits.
             </p>
@@ -236,33 +222,33 @@ const Waitlist = () => {
 
           {/* Benefits */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 text-center border border-white/20">
-              <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="bg-gray-50 rounded-2xl p-6 text-center border border-gray-200">
+              <div className="w-12 h-12 bg-[#1851fc] rounded-full flex items-center justify-center mx-auto mb-4">
                 <Star className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Early Access</h3>
-              <p className="text-white/80 text-sm">Be the first to try Seetu when we launch</p>
+              <h3 className="text-base font-semibold text-gray-900 mb-2">Early Access</h3>
+              <p className="text-gray-600 text-sm">Be the first to try Seetu when we launch</p>
             </div>
             
-            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 text-center border border-white/20">
-              <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="bg-gray-50 rounded-2xl p-6 text-center border border-gray-200">
+              <div className="w-12 h-12 bg-[#1851fc] rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Exclusive Updates</h3>
-              <p className="text-white/80 text-sm">Get insider information about new features</p>
+              <h3 className="text-base font-semibold text-gray-900 mb-2">Exclusive Updates</h3>
+              <p className="text-gray-600 text-sm">Get insider information about new features</p>
             </div>
             
-            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 text-center border border-white/20">
-              <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="bg-gray-50 rounded-2xl p-6 text-center border border-gray-200">
+              <div className="w-12 h-12 bg-[#1851fc] rounded-full flex items-center justify-center mx-auto mb-4">
                 <Clock className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Launch Benefits</h3>
-              <p className="text-white/80 text-sm">Special offers and bonuses for early adopters</p>
+              <h3 className="text-base font-semibold text-gray-900 mb-2">Launch Benefits</h3>
+              <p className="text-gray-600 text-sm">Special offers and bonuses for early adopters</p>
             </div>
           </div>
 
           {/* Form */}
-          <div className="bg-white/95 backdrop-blur-md rounded-3xl shadow-2xl border border-white/20 p-8">
+          <div className="bg-white rounded-3xl shadow-lg border border-gray-200 p-8">
             {error && (
               <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-xl flex items-center space-x-3">
                 <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0" />
@@ -344,7 +330,7 @@ const Waitlist = () => {
               <Button
                 type="submit"
                 disabled={isLoading || !formData.firstName || !formData.lastName || !formData.email || !formData.country}
-                className="w-full h-12 bg-gradient-to-r from-blue-600 to-teal-500 hover:from-blue-700 hover:to-teal-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:transform-none disabled:cursor-not-allowed"
+                className="w-full h-12 bg-[#1851fc] hover:bg-[#1444d9] text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:transform-none disabled:cursor-not-allowed"
               >
                 {isLoading ? (
                   <div className="flex items-center justify-center">

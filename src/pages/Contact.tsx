@@ -33,50 +33,23 @@ const Contact = () => {
 
   return (
     <div
-      className='min-h-screen bg-gradient-to-br from-blue-600 via-blue-700 to-cyan-600 relative overflow-hidden'
+      className='min-h-screen bg-white relative overflow-hidden'
       style={{ marginTop: '-4rem' }}
     >
       {/* Hero Section */}
       <section className='relative overflow-hidden pt-24 pb-20'>
-        {/* Animated Background */}
-        <div className='absolute inset-0 opacity-20'>
-          <svg
-            className='w-full h-full'
-            viewBox='0 0 1000 1000'
-            preserveAspectRatio='none'
-          >
-            <defs>
-              <linearGradient
-                id='contactGrad'
-                x1='0%'
-                y1='0%'
-                x2='100%'
-                y2='100%'
-              >
-                <stop offset='0%' stopColor='#3b82f6' stopOpacity='0.3' />
-                <stop offset='100%' stopColor='#06b6d4' stopOpacity='0.1' />
-              </linearGradient>
-            </defs>
-            <path
-              d='M0,300 Q250,200 500,300 T1000,300 L1000,0 L0,0 Z'
-              fill='url(#contactGrad)'
-              className='animate-pulse'
-            />
-          </svg>
-        </div>
-
         <div className='relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
-          <div className='animate-fade-in'>
-            <div className='w-16 h-16 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-6'>
+          <div>
+            <div className='w-16 h-16 bg-[#1851fc] rounded-2xl flex items-center justify-center mx-auto mb-6'>
               <MessageSquare className='w-8 h-8 text-white' />
             </div>
-            <h1 className='text-5xl lg:text-6xl font-bold text-white mb-6 font-nunito leading-tight'>
+            <h1 className='text-4xl lg:text-6xl font-bold text-gray-900 mb-6 font-nunito leading-tight'>
               Get in
-              <span className='bg-gradient-to-r from-cyan-300 to-blue-300 bg-clip-text text-transparent'>
+              <span className='text-[#1851fc]'>
                 Touch
               </span>
             </h1>
-            <p className='text-xl text-white/90'>
+            <p className='text-lg lg:text-xl text-gray-600'>
               Ready to modernize your community's savings? We're here to help
               you get started.
             </p>
@@ -85,18 +58,18 @@ const Contact = () => {
       </section>
 
       {/* Contact Form & Info */}
-      <section className='py-20 bg-white'>
+      <section className='py-20 bg-gray-50'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='grid grid-cols-1 lg:grid-cols-3 gap-12'>
             {/* Contact Form */}
-            <div className='lg:col-span-2 animate-fade-in'>
-              <Card className='shadow-2xl border-0 bg-gradient-to-br from-white to-gray-50'>
+            <div className='lg:col-span-2'>
+              <Card className='shadow-lg border-0 bg-white'>
                 <CardContent className='p-8'>
                   <div className='flex items-center mb-6'>
-                    <div className='w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mr-4'>
+                    <div className='w-12 h-12 bg-[#1851fc] rounded-xl flex items-center justify-center mr-4'>
                       <Send className='w-6 h-6 text-white' />
                     </div>
-                    <h2 className='text-2xl font-bold text-gray-900 font-nunito'>
+                    <h2 className='text-xl font-bold text-gray-900 font-nunito'>
                       Send us a Message
                     </h2>
                   </div>
@@ -228,7 +201,7 @@ const Contact = () => {
                     <Button
                       type='submit'
                       size='lg'
-                      className='w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-semibold py-4 text-lg rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 font-nunito'
+                      className='w-full bg-[#1851fc] hover:bg-[#1444d9] text-white font-semibold py-4 text-base rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 font-nunito'
                     >
                       Send Message
                       <Send className='ml-2 w-5 h-5' />
@@ -239,13 +212,10 @@ const Contact = () => {
             </div>
 
             {/* Contact Information */}
-            <div
-              className='space-y-6 animate-fade-in'
-              style={{ animationDelay: '0.3s' }}
-            >
-              <Card className='bg-gradient-to-br from-blue-600 to-cyan-600 text-white border-0 shadow-xl'>
+            <div className='space-y-6'>
+              <Card className='bg-[#1851fc] text-white border-0 shadow-lg'>
                 <CardContent className='p-6'>
-                  <h3 className='text-xl font-semibold mb-4 font-nunito'>
+                  <h3 className='text-lg font-semibold mb-4 font-nunito'>
                     Contact Information
                   </h3>
 
@@ -291,9 +261,9 @@ const Contact = () => {
                 </CardContent>
               </Card>
 
-              <Card className='bg-gradient-to-br from-cyan-50 to-blue-50 border-0 shadow-lg'>
+              <Card className='bg-white border-0 shadow-md'>
                 <CardContent className='p-6'>
-                  <h3 className='text-lg font-semibold text-gray-900 mb-3 font-nunito'>
+                  <h3 className='text-base font-semibold text-gray-900 mb-3 font-nunito'>
                     Quick Start Options
                   </h3>
 
@@ -308,7 +278,7 @@ const Contact = () => {
                       </p>
                       <Button
                         size='sm'
-                        className='w-full bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 font-nunito'
+                        className='w-full bg-[#1851fc] hover:bg-[#1444d9] text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 font-nunito'
                       >
                         Create Organization Group
                       </Button>
@@ -325,7 +295,7 @@ const Contact = () => {
                       </p>
                       <Button
                         size='sm'
-                        className='w-full bg-gradient-to-r from-cyan-500 to-teal-500 hover:from-cyan-600 hover:to-teal-600 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 font-nunito'
+                        className='w-full bg-[#1851fc] hover:bg-[#1444d9] text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 font-nunito'
                       >
                         Join Marketplace
                       </Button>

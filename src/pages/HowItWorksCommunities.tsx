@@ -6,29 +6,24 @@ import { Users, Settings, Calendar, Shield, CheckCircle, TrendingUp } from 'luci
 
 const HowItWorksCommunities = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-seetu-primary via-blue-600 to-purple-700 relative overflow-hidden" style={{ marginTop: '-4rem' }}>
+    <div className="min-h-screen bg-white relative overflow-hidden" style={{ marginTop: '-4rem' }}>
       {/* Hero Section */}
       <section className="py-16 lg:py-24 relative overflow-hidden">
-        {/* Background decoration */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-transparent to-purple-600/20"></div>
-        <div className="absolute top-20 left-10 w-72 h-72 bg-white/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-300/10 rounded-full blur-3xl"></div>
-        
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center">
             <div className="mb-8">
-              <p className="text-white/90 text-sm font-medium mb-4 tracking-wide uppercase">
+              <p className="text-[#1851fc] text-sm font-medium mb-4 tracking-wide uppercase">
                 For Communities
               </p>
-              <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+              <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
                 Digitize Your
               </h1>
-              <h1 className="text-5xl lg:text-7xl font-bold text-white mb-8 leading-tight">
+              <h1 className="text-4xl lg:text-6xl font-bold text-[#1851fc] mb-8 leading-tight">
                 Community Fund
               </h1>
             </div>
             
-            <p className="text-xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg lg:text-xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
               Digitize your existing rotating savings groups with powerful management tools. 
               Perfect for families, religious groups, cultural organizations, and close-knit communities.
             </p>
@@ -36,7 +31,7 @@ const HowItWorksCommunities = () => {
             <div className="flex justify-center items-center mb-16">
               <Button 
                 size="lg" 
-                className="bg-white text-seetu-primary hover:bg-gray-50 hover:text-seetu-primary-hover font-semibold px-8 py-4 text-lg min-w-[220px] h-14 rounded-lg shadow-lg transition-all duration-200"
+                className="bg-[#1851fc] text-white hover:bg-[#1444d9] font-semibold px-8 py-4 text-base min-w-[220px] h-14 rounded-lg shadow-lg transition-all duration-200"
               >
                 Organize Your Group
               </Button>
@@ -46,13 +41,13 @@ const HowItWorksCommunities = () => {
       </section>
 
       {/* Community Types */}
-      <section className="py-32 bg-white">
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl lg:text-5xl font-bold text-seetu-navy mb-6">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
               Perfect for Your Organization
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-base text-gray-600 max-w-2xl mx-auto">
               Whether you're a temple committee, family group, or professional network
             </p>
           </div>
@@ -80,10 +75,10 @@ const HowItWorksCommunities = () => {
                 description: "Workplace teams, industry associations, alumni networks"
               }
             ].map((group, index) => (
-              <Card key={index} className="hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white border-0 shadow-lg">
-                <CardContent className="p-8 text-center">
-                  <div className="text-5xl mb-6">{group.icon}</div>
-                  <h3 className="text-lg font-semibold text-seetu-navy mb-4">{group.title}</h3>
+              <Card key={index} className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1 bg-white border-0 shadow-md">
+                <CardContent className="p-6 text-center">
+                  <div className="text-4xl mb-4">{group.icon}</div>
+                  <h3 className="text-base font-semibold text-gray-900 mb-3">{group.title}</h3>
                   <p className="text-gray-600 text-sm leading-relaxed">{group.description}</p>
                 </CardContent>
               </Card>
@@ -93,13 +88,13 @@ const HowItWorksCommunities = () => {
       </section>
 
       {/* Setup Process */}
-      <section className="py-32 bg-seetu-background">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl lg:text-5xl font-bold text-seetu-navy mb-6">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
               Simple Setup for Organizers
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-base text-gray-600 max-w-2xl mx-auto">
               Complete control over your group settings and member management
             </p>
           </div>
@@ -131,16 +126,16 @@ const HowItWorksCommunities = () => {
                 description: "Invite members and manage their participation throughout the cycle"
               }
             ].map((item) => (
-              <Card key={item.step} className="relative hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white border-0 shadow-lg">
-                <CardContent className="p-8 text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-seetu-primary to-seetu-primary-hover rounded-2xl flex items-center justify-center mx-auto mb-6">
-                    <item.icon className="w-8 h-8 text-white" />
+              <Card key={item.step} className="relative hover:shadow-lg transition-all duration-300 hover:-translate-y-1 bg-white border-0 shadow-md">
+                <CardContent className="p-6 text-center">
+                  <div className="w-14 h-14 bg-[#1851fc] rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <item.icon className="w-7 h-7 text-white" />
                   </div>
-                  <div className="absolute -top-4 -right-4 w-10 h-10 bg-seetu-success text-white rounded-full flex items-center justify-center text-sm font-bold shadow-lg">
+                  <div className="absolute -top-3 -right-3 w-8 h-8 bg-[#1851fc] text-white rounded-full flex items-center justify-center text-xs font-bold shadow-md">
                     {item.step}
                   </div>
-                  <h3 className="text-lg font-semibold text-seetu-navy mb-3">{item.title}</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
+                  <h3 className="text-base font-semibold text-gray-900 mb-2">{item.title}</h3>
+                  <p className="text-gray-600 text-xs leading-relaxed">{item.description}</p>
                 </CardContent>
               </Card>
             ))}
