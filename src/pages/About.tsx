@@ -142,6 +142,11 @@ const About = () => {
                 For individuals seeking savings groups, matched by our AI system. 
                 Connect with like-minded savers in your community.
               </p>
+              <div className="mt-3">
+                <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-[#1851fc]">
+                  Coming Soon
+                </span>
+              </div>
             </div>
           </div>
         </div>
