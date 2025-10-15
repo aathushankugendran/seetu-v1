@@ -9,7 +9,7 @@ const About = () => {
       <section className="relative py-16 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-3xl mx-auto">
           <div className="text-center space-y-4">
-            <h1 className="text-4xl lg:text-6xl text-gray-900 leading-tight font-nunito">
+            <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight font-nunito">
               About 
               <span className="text-[#1851fc]">
                 Seetu
